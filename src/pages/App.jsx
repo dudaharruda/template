@@ -1,7 +1,8 @@
-import { Avatar, Button, Container } from "@mui/material";
+import { Avatar, Button, Container,Grid } from "@mui/material";
 import { useEffect, useState } from "react";
 import { Outlet } from "react-router";
 import Produto from "../components/Produto";
+
 
 
 
@@ -68,7 +69,7 @@ function App() {
 
     return (
         <>
-            <Container sx={{ display: "flex", gap: "2rem", flexWrap: "wrap" }} >
+           <Grid container sx={{ padding:3,flexWrap:"wrap",gap:5, justifyContent: "center"}}>
                 { erro && ( <span>{erro}</span>)}
                 { produtos && (
                     produtos.map( (produto, index ) => (
@@ -83,7 +84,7 @@ function App() {
                     ) )
                 )}
                 
-            </Container>
+            </Grid>
         </>
         
     );
